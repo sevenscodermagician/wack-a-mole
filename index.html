@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Whack-a-Mole</title>
+  <link rel="stylesheet" href="mole.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <h1>Whack-a-Mole</h1>
+    <div class="stats">
+      <span>⏱ <strong id="time">30</strong>s</span>
+      <span>🎯 Score: <strong id="score">0</strong></span>
+      <span>🏆 Best: <strong id="best">—</strong></span>
+      <label class="ctrl">
+        Speed:
+        <select id="speed">
+          <option value="1200">Slow</option>
+          <option value="900" selected>Normal</option>
+          <option value="660">Fast</option>
+        </select>
+      </label>
+      <button id="start">Start</button>
+      <button id="stop" disabled>Stop</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="grid" class="grid" aria-label="Whack-a-Mole grid">
+      <!-- 12 holes -->
+      <div class="hole"><div class="mole" aria-hidden="true"><img src="mole.gif" alt="mole.png" height="60" width="60"></div></div>
+      <div class="hole"><div class="mole"><img src="mole.gif" alt="mole.png" height="60" width="60"></div></div>
+      <div class="hole"><div class="mole"><img src="mole.gif" alt="mole.png" height="60" width="60"></div></div>
+      <div class="hole"><div class="mole"><img src="mole.gif" alt="mole.png" height="60" width="60"></div></div>
+      <div class="hole"><div class="mole"><img src="mole.gif" alt="mole.png" height="60" width="60"></div></div>
+      <div class="hole"><div class="mole"><img src="mole.gif" alt="mole.png" height="60" width="60"></div></div>
+      <div class="hole"><div class="mole"><img src="mole.gif" alt="mole.png" height="60" width="60"></div></div>
+      <div class="hole"><div class="mole"><img src="mole.gif" alt="mole.png" height="60" width="60"></div></div>
+      <div class="hole"><div class="mole"><img src="mole.gif" alt="mole.png" height="60" width="60"></div></div>
+      <div class="hole"><div class="mole"><img src="mole.gif" alt="mole.png" height="60" width="60"></div></div>
+      <div class="hole"><div class="mole"><img src="mole.gif" alt="mole.png" height="60" width="60"></div></div>
+      <div class="hole"><div class="mole"><img src="mole.gif" alt="mole.png" height="60" width="60"></div></div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Click a mole while it’s up to score. Faster speed = shorter pop time.</p>
+  </footer>
+
+  <script src="mole.js"></script>
+</body>
+</html>
